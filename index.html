@@ -2,6 +2,18 @@
 <html>
 
 <head>
+    <script>
+        function loadDoc(){
+            const xhttp = XMLHttpRequest();
+            xhttp.onload = function(){
+                document.getElementById("demo").innerHTML + this.responseText;
+            }
+            xhttp.open("GET", "velha_raposa.txt", true);
+            xhttp
+        }
+
+    </script>
+
     <div id="demo">
         <h1>O Ajax vai mudar tudo!</h1>
         <button tupe="button" onclick="loadDoc()"> Muda Tudo</button>
